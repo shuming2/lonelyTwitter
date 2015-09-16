@@ -1,6 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -26,7 +27,7 @@ Throwable <- Exception <- Runtime Exception <- IllegalArgumentException
 public abstract class Tweet extends Object implements Tweetable {
     private String text;
     private Date date;
-
+    ArrayList<Mood> moodList;
 
 
     public String getText() {

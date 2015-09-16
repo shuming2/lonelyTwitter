@@ -39,13 +39,13 @@ public class LonelyTwitterActivity extends Activity {
         Mood mood = new GoodMood("");
         //ArrayLis<Object> anythingList;
         //ArrayList<Tweet> tweetList;
-        ArrayList<Mood> moodList;
+        //ArrayList<Mood> moodList;
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-        bodyText = new ImportantTweet("blah");
-        //bodyText = (EditText) findViewById(R.id.body);
+
+        bodyText = (EditText) findViewById(R.id.body);
 		Button saveButton = (Button) findViewById(R.id.save);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
 
