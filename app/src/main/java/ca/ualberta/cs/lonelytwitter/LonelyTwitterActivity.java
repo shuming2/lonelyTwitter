@@ -36,7 +36,7 @@ public class LonelyTwitterActivity extends Activity {
 			throw new RuntimeException(e);
             //
 		}
-        Mood mood = new Mood_Good("");
+        Mood mood = new GoodMood("");
         //ArrayLis<Object> anythingList;
         //ArrayList<Tweet> tweetList;
         ArrayList<Mood> moodList;
