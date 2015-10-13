@@ -13,13 +13,7 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 implements M
     public TweetListTest() {
         super(ca.ualberta.cs.lonelytwitter.LonelyTwitterActivity.class);
     }
-/*
-    public void setUp() {
-    }
 
-    public void tearDown() {
-    }
-*/
     public void testHoldsStuff() {
         TweetList list = new TweetList();
         Tweet tweet = new NormalTweet("test");
@@ -36,28 +30,6 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 implements M
         assertEquals(list.count(), 2);
     }
 
-    public void testNoDuplicate() {
-        TweetList list = new TweetList();
-        Tweet tweet = new NormalTweet("test");
-        list.addTweet(tweet);
-        list.addTweet(new NormalTweet("test"));
-        assertEquals(list.count(), 1);
-    }
-    public void testGetTweets() {
-        TweetList list = new TweetList();
-        Tweet tweet1 = new NormalTweet("test1");
-        list.addTweet(tweet1);
-        Tweet tweet2 = new NormalTweet("test2");
-        list.addTweet(tweet2);
-        assertTrue(list.getTweets() == new Tweet[]{tweet1, tweet2});
-    }
-
-    public void testHasTweet() {
-        TweetList list = new TweetList();
-        Tweet tweet1 = new NormalTweet("test1");
-        list.addTweet(tweet1);
-        assertTrue(list.hasTweet(tweet1));
-    }
 
     private Boolean weWereNotified;
 
@@ -73,6 +45,7 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 implements M
         Tweet tweet = new NormalTweet("test");
         weWereNotified = Boolean.FALSE;
         list.add(tweet);
+        //we should have been notified here
         assertTrue(weWereNotified);
     }
     public void testModifyTweetInList() {
